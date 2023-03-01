@@ -1,5 +1,6 @@
 /** @type {typeof import('telegraf').Telegraf} */
 const { Telegraf } = require("telegraf");
+const {env} = require('dotenv').config();
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
