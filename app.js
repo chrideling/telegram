@@ -1,7 +1,7 @@
 /** @type {typeof import('telegraf').Telegraf} */
 const { Telegraf } = require("telegraf");
 
-const bot = new Telegraf("5954816316:AAG_rQYnMt_rv_senPp0Dc-mUg667TcmcYQ");
+const bot = new Telegraf(process.env.BOT_TOKEN);
 
 bot.command('start', ctx => {
     console.log(ctx.from)
