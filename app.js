@@ -13,9 +13,10 @@ const port = process.env.PORT || 5000;
 if (process.env.NODE_ENV === 'production') {
     bot = new Telegraf(process.env.BOT_TOKEN);
     bot.setWebHook(process.env.HEROKU_URL + bot.process.env.BOT_TOKEN);
-    console.log("we're in prod")
+    console.log("we're in prod");
 } else {
     bot = new Telegraf(process.env.BOT_TOKEN, { polling: true });
+    console.log("we're in dev");
 }
 
 app.use(express.json());

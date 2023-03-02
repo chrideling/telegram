@@ -7,3 +7,4 @@ node_modules*
 
 #hide not ready files
 server.js
+test
